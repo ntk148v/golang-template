@@ -1,5 +1,3 @@
-This is a Github repository template for Go to quickly create a new repository.
-
 <div align="center">
 	<h1>Golang template</h1>
 	<blockquote align="center">Github repository template for Go to quickly create a new repository.</blockquote>
