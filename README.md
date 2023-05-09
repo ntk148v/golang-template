@@ -7,31 +7,31 @@
     <a href="CHANGELOG.md">
       <img
         alt="Keep a Changelog"
-        src="https://img.shields.io/badge/changelog-Keep%20a%20Changelog-%23E05735?style=for-the-badge"
+        src="https://img.shields.io/badge/changelog-Keep%20a%20Changelog-%23E05735"
       />
     </a>
     <a href="https://github.com/ntk148v/golang-template/releases">
       <img
         alt="GitHub Release"
-        src="https://img.shields.io/github/v/release/ntk148v/golang-template?style=for-the-badge"
+        src="https://img.shields.io/github/v/release/ntk148v/golang-template"
       />
     </a>
     <a href="LICENSE">
       <img
         alt="GitHub License"
-        src="https://img.shields.io/github/license/ntk148v/golang-template?style=for-the-badge"
+        src="https://img.shields.io/github/license/ntk148v/golang-template"
       />
     </a>
     <a href="https://pkg.go.dev/github.com/ntk148v/golang-template">
       <img
         alt="Go Release"
-        src="https://pkg.go.dev/badge/github.com/ntk148v/golang-template.svg?style=for-the-badge"
+        src="https://pkg.go.dev/badge/github.com/ntk148v/golang-template.svg"
       />
     </a>
     <a href="go.mod">
       <img
         alt="go.mod"
-        src="https://img.shields.io/github/go-mod/go-version/ntk148v/golang-template?style=for-the-badge"
+        src="https://img.shields.io/github/go-mod/go-version/ntk148v/golang-template"
       />
     </a>
     <a
@@ -39,7 +39,7 @@
     >
       <img
         alt="Build Status"
-        src="https://img.shields.io/github/actions/workflow/status/ntk148v/golang-template/build.yml?branch=master?style=for-the-badge"
+        src="https://img.shields.io/github/actions/workflow/status/ntk148v/golang-template/build.yml?branch=master"
       />
     </a>
     <br />
