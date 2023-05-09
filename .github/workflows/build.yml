@@ -1,39 +1,37 @@
-name: Build
+name: build
 
 on:
-  - push
-  - pull_request
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
 
 jobs:
-  build:
-    name: ${{ matrix.os }}-${{ matrix.arch }}
-    runs-on: ubuntu-latest
+  ci:
     strategy:
+      fail-fast: false
       matrix:
-        os: [linux, windows, darwin]
-        arch: [386, amd64, arm64]
-        exclude:
-          - arch: "386"
-            os: darwin
-          - arch: arm64
-            os: windows
-
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
     steps:
-      - name: Checkout sources
-        uses: actions/checkout@v3
-      - name: Setup Go
-        uses: actions/setup-go@v4
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-go@v4
         with:
-          go-version: 1.17
+          go-version: "1.20"
+
       - name: Build
-        run: GOOS=${{ matrix.os }} GOARCH=${{ matrix.arch }} go build -ldflags "-s -w"
-      - uses: actions/upload-artifact@v3
-        if: ${{ matrix.os != 'windows' }}
+        run: make ci
+
+      - run: goreleaser release --rm-dist --snapshot
+        if: ${{ runner.os == 'Linux' }}
+
+      - name: Upload dist
+        uses: actions/upload-artifact@v3
         with:
-          name: golang-template-${{ matrix.os }}-${{ matrix.arch }}
-          path: golang-template
-      - uses: actions/upload-artifact@v3
-        if: ${{ matrix.os == 'windows' }}
-        with:
-          name: golang-template-${{ matrix.os }}-${{ matrix.arch }}.exe
-          path: golang-template.exe
+          name: dist-${{ matrix.os }}
+          path: dist
