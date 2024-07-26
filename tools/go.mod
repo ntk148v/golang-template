@@ -1,6 +1,6 @@
 module github.com/ntk148v/golang-template/build
 
-go 1.20
+go 1.22
 
 require (
 	github.com/client9/misspell v0.3.4
