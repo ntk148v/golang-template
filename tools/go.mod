@@ -1,7 +1,7 @@
 module github.com/ntk148v/golang-template/build
 
 go 1.22
-toolchain go1.23.6
+toolchain go1.24.1
 
 require (
 	github.com/client9/misspell v0.3.4
@@ -429,7 +429,7 @@ require (
 	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.27.0 // indirect
 	gocloud.dev v0.37.0 // indirect
-	golang.org/x/crypto v0.33.0 // indirect
+	golang.org/x/crypto v0.35.0 // indirect
 	golang.org/x/exp v0.0.0-20240909161429-701f63a606c0 // indirect
 	golang.org/x/exp/typeparams v0.0.0-20250210185358-939b2ce775ac // indirect
 	golang.org/x/mod v0.23.0 // indirect
